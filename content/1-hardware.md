@@ -27,7 +27,7 @@ This option uses a web browser to emulate the desktop/gui environment of the lin
 This will take you to a desktop-style interface with Kennicott. By clicking the black square icon at the bottom ("Terminal Emulator"), you can now access Kennicott through the command line. 
 
 ### Virtual Studio Code (vscode):
-Virtual Studio Code is a popular program used for writing and testing different kinds of computer code.  Properly, it can be referred to as an Integrated Development Environment (IDE).  [VS Code](https://code.visualstudio.com/) is free software, offered by Microsoft, that can be run on any operating system.  Functionality within VS Code, for ssh, jupyter notebooks, etc. is added through "Extensions," many of which come with a blue check mark to indicate that they are official Microsoft version.  VS Code also offers native integration with git repositories, which make it convenient for working on collaborative projects.
+Virtual Studio Code is a popular program used for writing and testing different kinds of computer code and it has the ability to access and run files on kennicott.  Properly, it can be referred to as an Integrated Development Environment (IDE).  [VS Code](https://code.visualstudio.com/) is free software, offered by Microsoft, that can be run on any operating system.  Functionality within VS Code, for ssh, jupyter notebooks, etc. is added through "Extensions," many of which come with a blue check mark to indicate that they are official Microsoft versions.  VS Code also offers native integration with git repositories, which make it convenient for working on collaborative projects.
 
 If you install VS Code on your local computer/laptop, and then add the "Remote - SSH" extension from Microsoft, you can log into kennicott and work directly on files on this remote server.
 
@@ -39,7 +39,7 @@ This option doesn't handle graphics nearly as well if you're not physically on c
    ```
    rsync -avzh PATH/TO/WHAT/TO/COPY USERNAME@kennicott.ibest.uidaho.edu:PATH/WHERE/FILE/OR/DIRECTORY/SHOULD/BE/COPIED/
    ```
-   Some [attention is necessary regarding the use of slashes](http://qdosmsq.dunbar-it.co.uk/blog/2013/02/rsync-to-slash-or-not-to-slash/) at the end of the source (`WHAT/TO/COPY`) path, when using `rsync`. A slash at the end means copy the directory's contents.  No slash means copy the directory, as well as its contents.
+   Some [attention is necessary regarding the use of slashes](http://qdosmsq.dunbar-it.co.uk/blog/2013/02/rsync-to-slash-or-not-to-slash/) at the end of the source (`WHAT/TO/COPY`) path, when using `rsync`. A slash at the end means copy the directory's contents.  No slash means copy the directory itself, as well as its contents/subdirectories.
 
 ### Mounting /data/stor as a local drive:
 This option allows you to use files stored on kennicott, and then manipulate them on your local computer.  Any processing of the files happens with your local computer's processors and memory.
@@ -50,14 +50,6 @@ On a Windows, Mac, or Linux computer, kennicott can be mounted via samba to the 
 On a Windows, Mac, or Linux computer, you can manipulate files (copying/moving/renaming/deleting) via some 3rd party applications that use sftp, such as [Filezilla](https://filezilla-project.org/) on a Windows computer or [cyberduck](https://cyberduck.io/) on a Mac.
 
 Talk to Tim about any of the options, or for more information.
-
-
-
-
-
-## Coding in Kennicott
-
-To access a Python interface (an Integrated Development Environment, IDE) like Spyder or Jupyter Lab, first specify a conda environment. It may be useful to [clone one of Kennicott's existing environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#cloning-an-environment) and work from that cloned environment. This way, you're free to modify (or even break) your own cloned environment without impacting anyone else. For example, rather than using the environment "spatialenv21b," Chris Miele created a clone of this environment, named "chrisenv." Now each time he logs onto Kennicott, he types `source activate chrisenv` to activate this environment. Typing `spyder` then opens a Spyder interface, from which you can write, run, and save scripts. 
 
 
 
