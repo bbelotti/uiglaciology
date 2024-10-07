@@ -49,7 +49,13 @@ In spring 2022, there are four main environments that are available to all users
 ## Preferred python interface
 Our lab uses three different Integrated Development Environments (IDEs) or front-ends for interacting with python, and writing, running, debugging, and plotting tasks.
 
-These three front ends are:
+These IDEs have the ability to read/write both python (.py) scripts and jupyter notebooks (.ipynb).  If working with notebooks, your figures can be made interactive if you use the appropriate matplotlib backend for your plots.  To do so and produce zoomable/pannable, interactive plots, include the following line near the top of your python notebook file:
+```python
+%matplotlib widget
+```
+This is an example of a Jupyter "magic", and controls iPython operation.  Other magics also control plotting, or work within the operating system.
+
+The three python IDEs we use are:
 
 |**VS Code**|**Jupyter Lab**|**Spyder**|
 | -- | -- | -- | 
